@@ -30,4 +30,3 @@ npm-debug.log
 node_modules
 public/dist
 iisnode.yml
-db/shortly.sqlite
