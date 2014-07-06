@@ -136,7 +136,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('deploy', function(){
-    grunt.task.run(['test', 'build', 'upload']);
+    grunt.task.run(['test', 'build', 'shell:prodServer']);
   });
 
 };
