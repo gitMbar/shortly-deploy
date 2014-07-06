@@ -4,8 +4,12 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     concat: {
+      lib: {
+        src: ['public/lib/underscore.js', 'public/lib/jquery.js', 'public/lib/handlebars.js', 'public/lib/backbone.js'],
+        dest: 'public/dist/lib.js'
+      },
       dist: {
-        src: ['public/lib/**/*.js', 'public/client/**/*.js'],
+        src: ['public/client/**/*.js'],
         dest: 'public/dist/built.js'
       }
     },
@@ -28,7 +32,8 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         files: {
-          'public/dist/built.min.js': ['public/dist/built.js']
+          'public/dist/built.min.js': ['public/dist/built.js'],
+          'public/dist/lib.min.js': ['public/dist/lib.js']
         }
       }
     },
