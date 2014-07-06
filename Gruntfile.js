@@ -119,7 +119,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'mochaTest',
+    // 'mochaTest',
     'jshint',
     'concat',
     'cssmin',
@@ -136,7 +136,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('deploy', function(){
-    grunt.task.run(['test', 'build', 'shell:prodServer']);
+    grunt.task.run(['test', 'build', 'shell:prod']);
   });
 
 };
